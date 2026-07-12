@@ -1,14 +1,10 @@
 pipeline {
     agent { label 'docker-server-farras' }
     
-    tools {nodejs "nodejs-simpleapps"}
+    tools {nodejs "nodejs-18.16.0"}
 
     stages {
-        stage('Checkout SCM') {
-            steps {
-                git branch: 'main', url: ''
-            }
-        }
+        
         stage('Build') {
             steps {
                 sh '''
