@@ -1,6 +1,7 @@
 services:
   apps:
-    build: .
+    # Menggunakan image dinamis yang dikirim dari Jenkinsfile
+    image: ${IMAGE_TO_DEPLOY}
     ports:
       - "10000:3000"
     restart: always
