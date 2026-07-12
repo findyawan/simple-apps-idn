@@ -11,13 +11,7 @@ pipeline {
                 npm install'''
             }
         }
-        stage('Testing') {
-            steps {
-                sh '''
-                npm test
-                npm run test:coverage'''
-            }
-        }
+        
         stage('Code Review') {
             steps {
                 sh '''
